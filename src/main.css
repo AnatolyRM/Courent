@@ -1,0 +1,40 @@
+:root {
+	--primary: #EA40A4;
+	--light: #EEE;
+	--dark: #313154;
+
+	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'montserrat', sans-serif;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+	cursor: initial;
+}
+
+body {
+	background: var(--light);
+	color: var(--dark);
+}
+
+section {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5em;
+}
+
+p{
+	margin-bottom: 0;
+}
