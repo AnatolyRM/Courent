@@ -7,7 +7,7 @@ const dateReq = ref(localStorage.getItem('dateRequest'))
 const arrCurrencys = ref([])
 const input_content = ref(['USD','EUR','RUB'])
 const flag = ref(true)
-const url = `https://www.nbrb.by/api/exrates/rates?ondate=${dateReq.value}&periodicity=0`;
+const url = `https://api.nbrb.by/exrates/rates?ondate=${dateReq.value}&periodicity=0`;
 const errors = [];
 
 const handleChange = value => input_content.value = value
@@ -27,7 +27,7 @@ async function localName() {
 localName()
 
 async function localDataGet() {
-	await fetch(`https://www.nbrb.by/api/exrates/rates?ondate=${dateReq.value}&periodicity=0`)
+	await fetch(`https://api.nbrb.by/exrates/rates?ondate=${dateReq.value}&periodicity=0`)
 		.then((response) => response.json())
 		.then((data) => {
 			let newArr = data.filter(el => input_content.value.filter(it => it == el.Cur_Abbreviation) == el.Cur_Abbreviation)
